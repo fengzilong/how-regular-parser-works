@@ -1,0 +1,103 @@
+body {
+	font-size: 18px;
+	margin: 0;
+	padding: 0;
+}
+
+.app {
+	display: flex;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.app .tokens {
+	width: 33%;
+	height: 100vh;
+	overflow-y: auto;
+	padding-bottom: 30px;
+	box-sizing: border-box;
+}
+
+.app .diff {
+	width: 33%;
+	height: 100vh;
+	overflow: auto;
+}
+.app .diff2 {
+	width: 33%;
+	height: 100vh;
+	overflow: auto;
+}
+
+.msg {
+	position: absolute;
+	width: 60px;
+	font-size: 11px;
+	text-align: center;
+	word-break: break-word;
+	background-color: #FFF;
+	color: #000;
+	padding: 2px 0;
+}
+
+.lexer-tokens {
+	line-height: 3;
+}
+.lexer-tokens pre {
+	display: inline;
+}
+.lexer-highlight {
+	color: #FFF;
+	background-color: #ff3c7e;
+}
+.type-indicator {
+	position: absolute;
+	line-height: 1.6;
+	font-size: 14px;
+	padding: 0 5px;
+	background-color: #000;
+	color: #FFF;
+}
+
+/* Parser */
+.tokens {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.token {
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	text-align: center;
+	font-size: 16px;
+	position: relative;
+}
+
+.token.active::after {
+	position: absolute;
+	bottom: -8px;
+	content: '';
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: #000;
+}
+
+.token-code {
+	background-color: #ff3c7e;
+	color: #FFF;
+	padding: 3px 10px;
+}
+
+.token-code pre {
+	margin: 0;
+}
+
+.token-type {
+	background-color: #000;
+	color: #FFF;
+	padding: 3px 10px;
+	font-size: 15px;
+}
